@@ -25,5 +25,5 @@ Run this command in your project directory:
 
 ```bash
 npm install
-
+```
 THE DOWNLOADED FILE WILL BE IN THE SAME FOLDER
