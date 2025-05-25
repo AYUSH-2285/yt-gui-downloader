@@ -27,3 +27,8 @@ Run this command in your project directory:
 npm install
 ```
 THE DOWNLOADED FILE WILL BE IN THE SAME FOLDER
+
+### 4. Run the app with
+```bash
+npm start
+```
