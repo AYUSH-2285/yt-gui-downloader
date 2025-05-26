@@ -30,8 +30,17 @@ Make sure the following files are **downloaded manually** and placed in the proj
 npm install
 ```
 
-### Run the app with
+## Run the app with
+
 ```bash
 npm start
 ```
+📥 Download the App Executable
+The latest Windows executable yt-gui-downloader.exe is available in the Releases section. Download it to get started quickly without building from source.
+
+▶️ Running the App
+Double-click yt-gui-downloader.exe (if downloaded from Releases) or run via npm start if running from source.
+
+Ensure both yt-dlp.exe and ffmpeg.exe are present in the same folder or accessible in your system's PATH.
+
 THE DOWNLOADED FILE WILL BE IN THE SAME FOLDER
