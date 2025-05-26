@@ -1,27 +1,35 @@
-# yt-gui-downloader
+# 🎬 YouTube GUI Downloader
 
-## Setup Instructions
+A lightweight, Electron-based GUI YouTube downloader using [yt-dlp](https://github.com/yt-dlp/yt-dlp) and [ffmpeg](https://ffmpeg.org/). Supports MP3 and MP4 downloads with selectable quality and theme switching (dark/light).
 
-This project requires **ffmpeg** and **yt-dlp** executables along with Node.js dependencies.
+## 🚀 Features
 
-### 1. Download ffmpeg
+- Download YouTube videos or audio in various formats
+- MP3 and MP4 support
+- Select quality (320kbps audio, 720p–8K video)
+- Light & Dark theme toggle
+- Progress bar and status output
 
-Download ffmpeg from the official site:  
-https://ffmpeg.org/download.html
+---
 
-- Choose the appropriate build for your OS.
-- Extract it and place `ffmpeg.exe` inside your project folder or add it to your system PATH.
+## 🔧 Requirements
 
-### 2. Download yt-dlp
+Make sure the following files are **downloaded manually** and placed in the project root directory:
 
-Download `yt-dlp.exe` from:  
-https://github.com/yt-dlp/yt-dlp/releases/latest
+1. [`yt-dlp.exe`](https://github.com/yt-dlp/yt-dlp/releases/latest)
+2. [`ffmpeg.exe`](https://www.gyan.dev/ffmpeg/builds/)  
+   👉 Download the **ffmpeg-release-essentials.zip**, extract, and copy `ffmpeg.exe` (from the `bin` folder) to your project folder.
 
-- Save `yt-dlp.exe` inside your project folder.
+---
 
-### 3. Install Node.js dependencies
-
-Run this command in your project directory:
+## 🛠 Installation
 
 ```bash
 npm install
+```
+
+### Run the app with
+```bash
+npm start
+```
+THE DOWNLOADED FILE WILL BE IN THE SAME FOLDER
