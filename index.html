@@ -86,6 +86,14 @@
     body.light .theme-toggle button {
       background-color: #0b7dda;
     }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .button-group button {
+      flex: 1;
+    }
   </style>
 </head>
 <body class="dark">
@@ -110,7 +118,10 @@
       <option value="4320">4320p (8K)</option>
     </select>
 
-    <button onclick="download()">Download</button>
+    <div class="button-group">
+      <button onclick="download()">Download</button>
+      <button onclick="refreshPage()">Refresh</button>
+    </div>
 
     <div id="progressBar"><div id="progressFill"></div></div>
     <pre id="status"></pre>
@@ -129,6 +140,14 @@
         body.classList.remove('light');
         body.classList.add('dark');
         toggleBtn.textContent = 'Switch to Light Mode';
+      }
+    });
+
+    // Ctrl+R shortcut for refresh
+    window.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key.toLowerCase() === 'r') {
+        e.preventDefault();
+        refreshPage();
       }
     });
   </script>

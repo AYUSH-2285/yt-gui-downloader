@@ -6,6 +6,9 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^28.1.0"
+    "electron": "^28.3.3"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.1.2"
   }
 }

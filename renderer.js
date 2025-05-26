@@ -17,7 +17,11 @@ window.download = function () {
   if (format === 'mp3') {
     args = ['-x', '--audio-format', 'mp3', '--audio-quality', quality, url];
   } else {
-    args = ['-f', `bestvideo[height<=${quality}]+bestaudio/best[height<=${quality}]`, url];
+    args = [
+      '-f', `bestvideo[height<=${quality}]+bestaudio/best[height<=${quality}]`,
+      '--merge-output-format', 'mp4',   // Add this line
+      url
+    ];
   }
 
   args.push('--newline');
@@ -48,12 +52,10 @@ window.download = function () {
   });
 };
 
-// Theme toggle code
-
+// Theme toggle
 const toggleBtn = document.getElementById('toggleTheme');
 const body = document.body;
 
-// Load saved theme or default to dark
 const savedTheme = localStorage.getItem('theme') || 'dark';
 applyTheme(savedTheme);
 
@@ -74,3 +76,8 @@ function applyTheme(theme) {
     toggleBtn.textContent = 'Switch to Light Mode';
   }
 }
+
+// ✅ Add refreshPage() for Refresh button and Ctrl+R
+window.refreshPage = function () {
+  location.reload();
+};
