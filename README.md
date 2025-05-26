@@ -16,9 +16,11 @@ A lightweight, Electron-based GUI YouTube downloader using [yt-dlp](https://gith
 
 Make sure the following files are **downloaded manually** and placed in the project root directory:
 
-1. [`yt-dlp.exe`](https://github.com/yt-dlp/yt-dlp/releases/latest)
+1. [`yt-dlp.exe`](https://github.com/yt-dlp/yt-dlp/releases/latest)  
+   Download the latest release and place `yt-dlp.exe` in your project folder.
+
 2. [`ffmpeg.exe`](https://www.gyan.dev/ffmpeg/builds/)  
-   👉 Download the **ffmpeg-release-essentials.zip**, extract, and copy `ffmpeg.exe` (from the `bin` folder) to your project folder.
+ 👉 Download the **ffmpeg-release-essentials.zip**, extract, and copy `ffmpeg.exe` (from the `bin` folder) to your project folder.
 
 ---
 
