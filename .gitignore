@@ -10,3 +10,5 @@ node_modules/
 # Optional: ignore logs and env files
 *.log
 .env
+
+/dist
