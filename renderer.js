@@ -19,10 +19,12 @@ window.download = function () {
   } else {
     args = [
       '-f', `bestvideo[height<=${quality}]+bestaudio/best[height<=${quality}]`,
-      '--merge-output-format', 'mp4',   // Add this line
+      '--merge-output-format', 'mp4',
+      '--postprocessor-args', '-c:a aac',  // <-- added this to transcode audio to AAC
       url
     ];
   }
+  
 
   args.push('--newline');
 
