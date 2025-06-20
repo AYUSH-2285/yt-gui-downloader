@@ -13,23 +13,35 @@
   "dependencies": {
     "@electron/remote": "^2.1.2"
   },
-"build": {
-  "appId": "com.yourname.yt-gui-downloader",
-  "productName": "yt-gui-downloader",
-  "asar": true,
-  "files": [
-    "**/*"
-  ],
-  "win": {
-    "target": "portable",
-    "icon": "build/icon.ico"
-  },
-  "mac": {
-    "target": []
-  },
-  "linux": {
-    "target": []
+  "build": {
+    "appId": "com.yourname.yt-gui-downloader",
+    "productName": "yt-gui-downloader",
+    "asar": true,
+    "files": [
+      "!dist/",
+      "!node_modules/",
+      "!*.md",
+      "!*.log",
+      "!*.gitignore",
+      "!package-lock.json",
+      "main.js",
+      "index.html",
+      "renderer.js",
+      "yt-dlp.exe",
+      "ffmpeg.exe",
+      "assets/**/*",
+      "build/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": []
+    },
+    "linux": {
+      "target": []
+    }
   }
-}
-
 }
