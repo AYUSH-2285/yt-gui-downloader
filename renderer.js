@@ -15,16 +15,20 @@ window.download = function () {
   let args;
 
   if (format === 'mp3') {
-    args = ['-x', '--audio-format', 'mp3', '--audio-quality', quality, url];
+    args = [
+      url,
+      '-x', '--audio-format', 'mp3', '--audio-quality', quality,
+      '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    ];
   } else {
     args = [
-      '-f', `bestvideo[height<=${quality}]+bestaudio/best[height<=${quality}]`,
+      url,
+      '-f', `bestvideo[ext=mp4][height<=${quality}]+bestaudio[ext=m4a]/best[ext=mp4][height<=${quality}]`,
       '--merge-output-format', 'mp4',
-      '--postprocessor-args', '-c:a aac',  // <-- added this to transcode audio to AAC
-      url
+      '--postprocessor-args', '-c:a aac',
+      '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
     ];
   }
-  
 
   args.push('--newline');
 
